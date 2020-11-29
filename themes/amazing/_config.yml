@@ -1,0 +1,392 @@
+######
+######  译者注：若一行注释出现两个#，则该行注释下行的内容可用
+######
+# 当前使用的Icarus主题的版本                Version of the configuration file
+version: 4.0.0
+# Icarus主题，可选择"default"/"syberpunk"   Icarus theme variant, can be "default" or "cyberpunk"
+variant: default
+# Path or URL to the website's logo
+logo: /img/logo.png
+# 页面元数据设置                    Page metadata configurations
+head:
+    # 配置网站的图标                URL or path to the website's icon
+    favicon: /img/favicon.png
+    # Web application manifests configuration
+    # https://developer.mozilla.org/en-US/docs/Web/Manifest
+    manifest:
+        # Name of the web application (default to the site title)
+        name: 
+        # The displayed name of the web application
+        # when there is not enough space to display full name
+        short_name: 
+        # The start URL of the web application
+        start_url: 
+        # The default theme color for the application
+        theme_color: 
+        # A placeholder background color for the application page to display
+        # before its stylesheet is loaded
+        background_color: 
+        # The preferred display mode for the website
+        display: standalone
+        # Image files that can serve as application icons for different contexts
+        icons:
+            -
+                # The path to the image file
+                src: ''
+                # A string containing space-separated image dimensions
+                sizes: ''
+                # A hint as to the media type of the image
+                type: 
+    # Open Graph 元数据            Open Graph metadata
+    # https://hexo.io/docs/helpers.html#open-graph
+    open_graph:
+        # 页面标题(可选)           Page title (og:title) (optional)
+        # 大多数时候你不需要填写    You should leave this blank for most of the time
+        title: 方寸小居
+        # 页面类型(可选)           Page type (og:type) (optional)
+        # 大多数时候你不需要填写    You should leave this blank for most of the time
+        type: blog
+        # 页面网址(可选)           Page URL (og:url) (optional)
+        # 大多数时候你不需要填写    You should leave this blank for most of the time
+        url: https://wkt.xyz
+        # 页面封面(可选)           Page cover (og:image) (optional) Default to the Open Graph image or thumbnail of the page
+        # 大多数时候你不需要填写    You should leave this blank for most of the time
+        image: http://cdn.wkt.xyz/avatar.png
+        # 网站名称(可选)           Site name (og:site_name) (optional)
+        # 大多数时候你不需要填写    You should leave this blank for most of the time
+        site_name: 方寸小居
+        # 页面作者(可选)           Page author (article:author) (optional)
+        # 大多数时候你不需要填写    You should leave this blank for most of the time
+        author: Real K
+        # 页面描述(可选)           Page description (og:description) (optional)
+        # 大多数时候你不需要填写    You should leave this blank for most of the time
+        description: blog,java,技术分享,算法,leetcode
+        # Twitter card type (twitter:card)
+        twitter_card: 
+        # Twitter ID (twitter:creator)
+        twitter_id: 
+        # Twitter ID (twitter:creator)
+        twitter_site: 
+        # Google+ profile link (deprecated)
+        google_plus: 
+        # Facebook admin ID
+        fb_admins: 
+        # Facebook App ID
+        fb_app_id: 
+    # 页面数据结构化               Structured data of the page
+    # https://developers.google.com/search/docs/guides/intro-structured-data
+    structured_data:
+        # 页面标题(可选)           Page title (optional)
+        # 大多数时候你不需要填写    You should leave this blank for most of the time
+        title: 方寸小居
+        # 页面类型(可选)           Page description (optional)
+        # 大多数时候你不需要填写    You should leave this blank for most of the time
+        description: blog,java,C++,技术分享,算法,leetcode
+        # 页面网址(可选)           Page URL (optional)
+        # 大多数时候你不需要填写    You should leave this blank for most of the time
+        url: http://wkt.xyz/
+        # 页面作者(可选)           Page author (article:author) (optional)
+        # 大多数时候你不需要填写    You should leave this blank for most of the time
+        author: Real K
+        # 页面图片(可选)           Page images (optional) Default to the Open Graph image or thumbnail of the page
+        # 大多数时候你不需要填写    You should leave this blank for most of the time
+        image: http://cdn.wkt.xyz/avatar.png
+    # 额外HTML元数据               Additional HTML meta tags in an array
+    meta:
+        # 元标签中指定attribute>=<value>风格
+        # 这是一个例子：name=theme-color;content=#123456 => <meta name="theme-color" content="#123456">
+        # Meta tag specified in <attribute>=<value> style
+        # E.g., name=theme-color;content=#123456 => <meta name="theme-color" content="#123456">
+        - ''
+    # RSS atom.xml所在的URL或路径  URL or path to the website's RSS atom.xml
+    rss: /atom.xml
+# 页面顶部的导航栏的配置            Page top navigation bar configurations
+navbar:
+    # 导航栏菜单项目               Naviagtion menu items
+    menu:
+        首页: /
+        归档: /archives
+        分类: /categories
+        标签: /tags
+        关于: /about
+    # 显示在右侧的导航栏链接        Links to be shown on the right of the navigation bar
+    links:
+        GitHub:
+            icon: fab fa-github
+            url: 'https://github.com/DustyDream7'
+# 页脚链接设置                     Page footer configurations
+# footer:
+#     # Links to be shown on the right of the footer section
+#     links:
+#         Creative Commons:
+#             icon: fab fa-creative-commons
+#             url: 'https://creativecommons.org/'
+#         Attribution 4.0 International:
+#             icon: fab fa-creative-commons-by
+#             url: 'https://creativecommons.org/licenses/by/4.0/'
+#         Download on GitHub:
+#             icon: fab fa-github
+#             url: 'https://github.com/ppoffice/hexo-theme-icarus'
+# 文章显示设置                           Article related configurations
+article:
+    # 代码高亮显示设置                   Code highlight settings
+    highlight:
+        # 代码高亮主题                   Code highlight themes
+        # https://github.com/highlightjs/highlight.js/tree/master/src/styles
+        theme: atom-one-light
+        # 显示复制代码按钮               Show code copying button
+        clipboard: true
+        # 代码块状态：" "、"折叠"、"展开" Default folding status of the code blocks. Can be "", "folded", "unfolded"
+        fold: unfolded
+    # 是否显示文章缩略图                 Whether to show thumbnail image for every article
+    thumbnail: true
+    # 文章许可块                        Article licensing block
+    licenses:
+        Creative Commons:
+            icon: fab fa-creative-commons
+            url: 'https://creativecommons.org/'
+        Attribution:
+            icon: fab fa-creative-commons-by
+            url: 'https://creativecommons.org/licenses/by/4.0/'
+        Noncommercial:
+            icon: fab fa-creative-commons-nc
+            url: 'https://creativecommons.org/licenses/by-nc/4.0/'
+# 搜索插件设置                          Search plugin configurations
+# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Search/
+search:
+    type: insight
+# 评论系统设置                          Comment plugin configurations
+# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/ 
+comment:
+    shortname:
+    type: gitalk
+    client_id: bcea53e7bac803e2ba99
+    client_secret: ad1bc7fc61eb5c0f5d21b2837527f7f0f103f975
+    repo: Some-of-Your-GitHub-Repo
+    owner: you_github_name
+    admin:
+        - you_github_name
+    per_page: 20                    # 可选填
+    distraction_free_mode: false    # 可选填
+    pager_direction: last           # 可选填
+    create_issue_manually: false    # 可选填
+    proxy:                          # 可选填
+    flip_move_options:              # 可选填
+    enable_hotkey: true             # 可选填
+    language: zh-CN                 # 可选填
+# 捐赠系统设置                          Donate plugin configurations
+# https://blog.zhangruipeng.me/hexo-theme-icarus/categories/Plugins/Donation/
+donates:
+    # Alipay donate button configurations
+    -
+        # Donation entry name
+        type: alipay
+        # Qrcode image URL
+        qrcode: 'https://raw.githubusercontent.com/removeif/blog_image/master/img/2019/20190802135456.png'
+    -
+        # Donation entry name
+        type: wechat
+        # Qrcode image URL
+        qrcode: 'https://raw.githubusercontent.com/removeif/blog_image/master/img/2019/20190802135550.png'
+#    -
+#    -
+#        type: patreon
+#        # URL to the Patreon page
+#        url: ''
+#    # Paypal donate button configurations
+#    -
+#        type: paypal
+#        # Paypal business ID or email address
+#        business: ''
+#        # Currency code
+#        currency_code: USD
+#    # Wechat donate button configurations
+#    -
+#        type: wechat
+#        # Wechat qrcode image URL
+#        qrcode: ''
+# 分享插件设置                      Share plugin configurations
+# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
+share:
+    type: addthis
+    # URL to the ShareThis share plugin script
+    install_url: //s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5fc37f96919363f8
+# 侧边栏设置                        Sidebar configurations.
+# 只有当存在一个以上小部件时可见      Please be noted that a sidebar is only visible when it has at least one widget
+sidebar:
+    # 左侧栏设置                    Left sidebar configurations
+    left:
+        # 侧边栏是否不随页面滚动     Whether the sidebar sticks to the top when page scrolls
+        sticky: true
+    # 右侧栏设置                    Right sidebar configurations
+    right:
+        # 侧边栏是否不随页面滚动     Whether the sidebar sticks to the top when page scrolls
+        sticky: true
+# 侧栏小部件设置                    Sidebar widget configurations
+# http://ppoffice.github.io/hexo-theme-icarus/categories/Widgets/
+# 注释对应的节点，包括”-“一起注释掉，相应的widget不显示
+widgets:
+    # 目录工具                     Table of contents widget configurations
+    # Table of contents widget configurations
+    -
+        # Where should the widget be placed, left sidebar or right sidebar
+        position: left
+        type: toc
+        # Whether to show the index of each heading
+        index: true
+        # Whether to collapse sub-headings when they are out-of-view
+        collapsed: true
+        # Maximum level of headings to show (1-6)
+        depth: 3
+    # Profile widget configurations
+    -
+        # 小部件位置               Where should the widget be placed, left sidebar or right sidebar
+        position: right
+        type: profile
+        # 作者名称                 Author name
+        author: Real K
+        # 作者格言                 Title of the author to be shown in the profile widget
+        author_title: 轻舟不载愁，微雨不拾秋。
+        # 作者所在地               Author's current location to be shown in the profile widget
+        location: 加利福尼亚共和国
+        # avatar图片的位置或URL     Path or URL to the avatar to be shown in the profile widget
+        avatar: http://cdn.wkt.xyz/avatar.png
+        # avatar图片是否圆形        Whether show the rounded avatar image
+        avatar_rounded: true
+        # Email地址                Email address for the Gravatar
+        gravatar: 
+        # 跟随按钮URL               URL or path for the follow button
+        follow_link: 'https://www.zhihu.com/people/Real_K'
+        # 链接&图片                 Links to be shown on the bottom of the profile widget
+        social_links:
+            Github:
+                icon: fab fa-github
+                url: 'https://github.com/DustyDream7'
+            知乎:
+                icon: fab fa-zhihu
+                url: 'https://www.zhihu.com/people/Real_K'
+            Telegram:
+                icon: fab fa-telegram
+                url: 'https://t.me/DustyDream'
+            QQ群:
+                icon: fab fa-qq
+                url: 'https://shang.qq.com/wpa/qunwpa?idkey=3871887bfc20f097d687002ffa27ec819d6cbcfd3a3921bed8fe4a38812fafcb'
+            RSS:
+                icon: fas fa-rss
+                url: /
+    # 友情链接                     Recommendation links widget configurations
+    -
+        # 小部件位置               Where should the widget be placed, left sidebar or right sidebar
+        position: right
+        type: links
+        # 链接名称                 Names and URLs of the sites
+        links:
+            方·圆: 'http://blog.fangmingxuan.com'
+    # 类别菜单                     Categories widget configurations
+    -
+        # 小部件位置               Where should the widget be placed, left sidebar or right sidebar
+        position: right
+        type: categories
+    # 最近文章                     Recent posts widget configurations
+    -
+        # 小部件位置               Where should the widget be placed, left sidebar or right sidebar
+        position: right
+        type: recent_posts
+    # 归档工具                     Archives widget configurations
+    -
+        # 小部件位置               Where should the widget be placed, left sidebar or right sidebar
+        position: left
+        type: archives
+    # 标签工具                     Tags widget configurations
+    -
+        # 小部件位置               Where should the widget be placed, left sidebar or right sidebar
+        position: left
+        type: tags
+    # 谷歌邮件订阅                 Google FeedBurner email subscription widget configurations
+    -
+        # 小部件位置              Where should the widget be placed, left sidebar or right sidebar
+        position: left
+        type: subscribe_email
+        # 输入栏提示文本          Hint text under the email input
+        description: 
+        # Feedburner ID
+        feedburner_id: ''
+    ## 广告联盟                     Google AdSense unit configurations
+    # -
+    #     # 小部件位置              Where should the widget be placed, left sidebar or right sidebar
+    #     position: left
+    #     type: adsense
+    #     # AdSense client ID
+    #     client_id: ''
+    #     # AdSense AD unit ID
+    #     slot_id: ''
+# 插件配置                          Plugin configurations
+# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
+plugins:
+    # 启用页面启动动画               Enable page startup animations
+    animejs: true
+    # 返回顶部                      Show the "back to top" button
+    back_to_top: true
+    # 百度统计                      Baidu Analytics plugin settings
+    #                              https://tongji.baidu.com
+    baidu_analytics:
+        # Baidu Analytics tracking ID
+        tracking_id: 
+    # Bing Webmaster Tools plugin settings
+    # https://www.bing.com/toolbox/webmaster/
+    # bing_webmaster:
+    #     # Bing Webmaster Tools tracking ID in the <meta> tag
+    #     tracking_id: 
+    # 不蒜子站点统计                 BuSuanZi site/page view counter
+    # https://busuanzi.ibruce.info
+    busuanzi: true
+    # CNZZ statistics
+    # https://www.umeng.com/web
+    cnzz:
+        # CNZZ tracker id
+        id: 
+        # CNZZ website id
+        web_id: 
+    # Enable the lightGallery and Justified Gallery plugins
+    gallery: true
+    # Google Analytics plugin settings
+    # https://analytics.google.com
+    google_analytics:
+        # Google Analytics tracking ID
+        tracking_id: 
+    # Hotjar user feedback plugin
+    # https://www.hotjar.com/
+    hotjar:
+        # Hotjar site id
+        site_id: 
+    # Enable the KaTeX math typesetting support
+    # https://katex.org/
+    katex: false
+    # Enable the MathJax math typesetting support
+    # https://www.mathjax.org/
+    mathjax: false
+    # Enable the Outdated Browser plugin
+    # http://outdatedbrowser.com/
+    outdated_browser: false
+    # Show a progress bar at top of the page on page loading
+    progressbar: true
+# CDN provider settings
+# https://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/speed-up-your-site-with-custom-cdn/
+providers:
+    # Name or URL template of the JavaScript and/or stylesheet CDN provider
+    cdn: jsdelivr
+    # Name or URL template of the webfont CDN provider
+    fontcdn: loli
+    # Name or URL of the fontawesome icon font CDN provider
+    iconcdn: loli
+    # https://cdn.jsdelivr.net/gh/removeif/removeif.github.io@v1.0.6/json_data/record.json, cdn前缀，对于hexo new page 页面中引用的资源文件不生效，需要手动改，如friend友链页中引用的资源
+    # my_cdn_pre: https://cdn.jsdelivr.net/gh/removeif/removeif-demo@v1.0.8/ #https://cdn.jsdelivr.net/gh/removeif/removeif.github.io@v2.2.1
+
+
+footer_copyright_dsec: © 版权说明：[本网站所有内容均收集于互联网或自己创作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="mailto:wo@zuikeaile.com" target="_blank">联系我</a>，立即处理]<br /> #footer 版权说明 可自由配置
+website_start_time: 2018/11/11 00:00:00 #网站运行开始时间,不填不显示
+footer_registered_no: 浙ICP备19035051号-1 #备案号
+side_music_netease_id: 2364053447 #侧边栏网易云歌单id
+busuanzi_only_count: false #当上面plugins中busuanzi: true时，此配置busuanzi_only_count为true时，网站不显示不蒜子统计数据，但是会每次统计。false时显示统计数据。
+has_live_2D_switch: true #live2D开关 true-开 false-关
+use_pjax: true #是否pjax
