@@ -1,0 +1,35 @@
+clone_depth: 5
+
+environment:
+    my_variable:
+        secure: W7/el7QYlLfg+IvdW/BzkgBDowL1CDryioP+aW6t/gIwtVJd5nT77/oW1zHTGhjQ
+    nodejs_version: "12"
+
+install:
+    - ps: Install-Product node $env:nodejs_version
+    - npm install
+    - node --version
+    - npm --version
+    - npm install hexo-cli -g
+
+build_script:
+    - hexo g
+
+artifacts:
+    - path: public
+
+on_success:
+    - git config --global credential.helper store
+    - ps: Set-Content -Path "$env:USERPROFILE\.git-credentials" -Value "https://$($env:access_token):x-oauth-basic@github.com`n" -NoNewline
+    - cat "$env:USERPROFILE\.git-credentials"
+    - git config --global user.email "%GIT_USER_EMAIL%"
+    - git config --global user.name "%GIT_USER_NAME%"
+    - git clone --depth 5 -q --branch=%TARGET_BRANCH% %STATIC_SITE_REPO% %TEMP%\static-site
+    - cd %TEMP%\static-site
+    - del * /f /q
+    - for /d %%p IN (*) do rmdir "%%p" /s /q
+    - SETLOCAL EnableDelayedExpansion & robocopy "%APPVEYOR_BUILD_FOLDER%\public" "%TEMP%\static-site" /e & IF !ERRORLEVEL! EQU 1 (exit 0) ELSE (IF !ERRORLEVEL! EQU 3 (exit 0) ELSE (exit 1))
+    - git add -A
+    - git commit -m "Update Static Site"
+    - git push
+    - appveyor AddMessage "Static Site Updated"
